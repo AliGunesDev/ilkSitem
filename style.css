@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;                 /*Burada başlangıçta margin ve padding sayesinde kenar boşlukları sıfırladık genel yazı fontunu değiştirdik.*/
+    font-family: sans-serif;
+}
+.banner{
+    height: 100vh;  /*sayfanın genel arka planı "vh" koycaz */
+    width: 100%; 
+    background-image: url(2.jpg);  /* linear-gradient(rgba(0,0,0,0,8), rgba(0,0,0,0,8)),url(2.png); şeklindede kullanılır*/
+    background-position: top; /* resmi yukarısına doğru odaklanır.(center-left-right diyede kullanabiliriz.*/
+    background-size: cover; /* resmi sayfaya güzelce örttük*/
+    opacity: 1; /*saydamlık veriyor*/
+}
+.navbar{
+    display: flex; /* esnetme demektir yani logonun altında kalan a hrefleri yan yana hizaya soktum.*/ /*display: inline-flex; olarakda kullanabilirim.*//*row (varsayılan) = soldan sağa doğru sıralar.*/ /*row-reverse = sağdan sola doğru sıralar.*/ /*column = yukarıdan aşağı doğru sıralar.*/ /*column-reverse = aşağıdan yukarı doğru sıralar.*/
+    width: 90%; /*navbar genişliği %90ı kaplasın*/
+    margin: auto; /*sağdan ve soldan boşluk eşit olsun*/
+    padding: 32px 0; /*alttan ve üstten 32px sağdan ve soldan 0px*/
+    align-items: center; /*a hrefleri  resme göre ortaladım.Aynı hizaya getirdim. Yani yukardaydı biraz daha aşşağı kaydırdım.*/
+    justify-content: space-between; /*solda logo sağda a hrefler olsun ortayı boş bırak*/
+}
+.logo{
+    cursor: pointer; /*mouse'ı logonun üzerine getirdiğimiz el işareti çıksın*/
+    border-radius: 50%; /*logoyu yuvarlak yaptım*/
+}
+.navbar ul li{
+    list-style-type: none; /*listenin başındaki nokta işaretlerini kaldırıyor.*/
+    display: inline-block;  /*liste konumu kaldırıyor yanyana hizalıyor*/
+    margin:0 40px;  /*sağdan sola aralarını açıyoruz.*/
+}
+.navbar ul li a{
+    text-decoration: none; /*a hreflerin altındaki çizgiyi yok ettik*/
+    font-size: 25px;    /*yazı boyutunu ayarladık.*/
+    color: white;   /*yazı rengini ayarladık*/
+    font-weight: bold;  /*yazıya kalınlık verdik.*/
+}
+.navbar ul li a:hover{
+    color: black;
+    transition: 0.5s;
+    box-shadow: 0 2px #EB5353;
+}
+
+.orta{
+    width: 100%; 
+    position: absolute ; /* sayfanın kenarlarına göre pozzisyonunu ayarlasın*/
+    left: 40px; /*yazıyı soldan 40px boşluk bırak*/
+    top: 190px; /*üstten 225px boşluk bırak*/
+    /* text-align: center; deseydik sayfaya ortalıcaktı*/   
+    color: black;
+}
+.orta h3 {
+    font-size: 20px;  /*h3'un yazı büyüklüğünü ayarladım*/
+}
+.orta h4 {
+    font-size: 20px;  /*h4'un yazı büyüklüğünü ayarladım*/
+    margin: 3px 0 0 10px; /*h4'ü h3e göre hizalamak istedim üsten 3px sağdan 0 aşağıdan 0 ve soldan 10px*/
+}
+button{
+    width: 130px; /*Butonlara genişlik verdim*/
+    padding: 13px 0; /*yazıya ferahlik verdik x ekseni üzerinde*/
+    margin-left: 22px; /*soldan boşluk bıraktım*/
+    border-radius: 35px; /*Butonun kenarlarını yuvarlak yap*/
+    color: white; /*yazıya renk verdik*/
+    cursor: pointer; /*butonun üzerine gelindiğinde el işareti çıksın*/
+    font-weight: 600; /*yazıya kalınlık verdik*/
+    background-color: #6166b3; /*yazının arka plan rengi*/
+    border: 0 solid ; /*Kenar çizgilerini kaldırdım*/
+    font-size: 14px; /*Yazının botunu ayarladık*/
+}
+button:hover{ /*butonun üzerine geldiğinde yapılacaklar*/
+    color: black; /*mouse üzerine geldiğinde siyah yap*/
+    transition: 0.5s; /*yavaş yavaş renk açılsın*/
+    background-color: #EB5353; /*mouse üzerine geldiği zaman arka plan rengi değişssin*/
+}
